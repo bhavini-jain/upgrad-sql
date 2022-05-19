@@ -1,0 +1,17 @@
+create database upgradassign;
+use upgradassign;
+create table Transactions(Check_no varchar(10), Company_id char, Date date , Amount float);
+Insert into Transactions values ('SBI123', 'B', '2020-01-18', 19877);
+show tables;
+Insert into Transactions values ('AXIS2476', 'D','2020-05-23', 20876);
+Insert into Transactions values ('HDFC7612', 'B','2020-09-09', 45261);
+Insert into Transactions values ('ICIC1010', 'E','2020-12-12', 10298);
+SELECT * FROM TRANSACTIONS;
+CREATE TABLE COMPANY(Company_id char,Company_name varchar(20));
+INSERT INTO COMPANY VALUES('A','Hyundai');
+INSERT INTO COMPANY VALUES('B','Toyota');
+INSERT INTO COMPANY VALUES('C','Tata');
+INSERT INTO COMPANY VALUES('E','Ford');
+INSERT INTO COMPANY VALUES('F','Maruti');
+select * from company;
+SELECT * from Transactions INNER JOIN Company ON Transactions.Company_id = Company.Company_id; 
